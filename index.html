@@ -5,34 +5,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <title>My Gallery</title>
 </head>
 
 <body>
     <nav class="navbar">
         <h1 class="logo">My Gallery</h1>
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <div class="gallery-container">
-        <div class="image-grid" id="imageGrid"></div>
-        <button id="loadMore">Load More</button>
-    </div>
+    <!-- Home Section with Gallery Description -->
+    <section id="home" class="section">
+        <div class="section-container">
+            <h2>Welcome to My Photography Collection</h2>
+            <p class="gallery-description">
+                Explore a curated collection of stunning photographs capturing moments of beauty from around the world. From vibrant nature scenes to urban landscapes, each image tells a unique story.
+            </p>
+        </div>
 
-    <div class="pagination">
-        <button class="page-btn active" data-page="1">1</button>
-        <button class="page-btn" data-page="2">2</button>
-        <button class="page-btn" data-page="3">3</button>
-    </div>
+        <div class="gallery-container">
+            <div class="image-grid" id="imageGrid"></div>
+            <button id="loadMore">Load More</button>
+        </div>
+
+        <div class="pagination">
+            <button class="page-btn active" data-page="1">1</button>
+            <button class="page-btn" data-page="2">2</button>
+            <button class="page-btn" data-page="3">3</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="section-container">
+            <h2>About</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>My Photography Journey</h3>
+                    <p>IqraGallery is a modern web platform designed to showcase beautiful image collections in a clean, organized interface. Created in 2025, this gallery aims to provide viewers with a seamless browsing experience while highlighting diverse visual content..</p>
+                    
+                    <h3>My Philosophy</h3>
+                    <p>We believe that a great gallery is more than just displaying images—it's about creating an experience that brings beauty and inspiration to visitors. Each image in this collection represents a carefully selected visual story worth sharing.</p>
+                    
+                    <h3>Technical Features</h3>
+                    <p>This website was built using HTML, CSS, and JavaScript with a focus on responsive design and user experience. The gallery features smooth image loading, intuitive navigation, and an immersive full-screen viewing mode for optimal enjoyment..</p>
+                </div>
+                <div class="key-points">
+                    <h3>Gallery Highlights</h3>
+                    <ul>
+                        <li>Nature and wildlife photography</li>
+                        <li>Urban landscapes and city life</li>
+                        <li>Cultural documentation</li>
+                        <li>Architectural studies</li>
+                        <li>Abstract and experimental work</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="section-container">
+            <h2>Contact Me</h2>
+            <p class="contact-intro">Interested in my work? Have questions about a specific photograph? Get in touch!</p>
+            
+            <div class="contact-container">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><strong>Email:</strong> iqragallery2025@gmail.com.com</p>
+                    <p><strong>Phone:</strong> (+92) 3222040619</p>
+                    <p><strong>Instagram:</strong> iqragallery2025@hotmail.com</p>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Modal for full image view -->
     <div id="imageModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="fullImage">
+        <div id="imageDescription" class="image-description"></div>
     </div>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 My Gallery. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
