@@ -1,1 +1,1 @@
- This is my gallery "Iqra Gllery"
+ This is my gallery "Iqra Gallery"
